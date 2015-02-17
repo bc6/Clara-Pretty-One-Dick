@@ -1,0 +1,68 @@
+#Embedded file name: eve/common/lib\autoexec_client.py
+import blue
+import stackless
+from carbon.common.lib import autoexec_client_core
+from eve.common.lib import autoexec_evecore
+autoexec_evecore.SetupEveSpecificLogging()
+stackless.getcurrent().block_trap = True
+appCacheDirs = ['Browser',
+ 'Browser/Img',
+ 'Map',
+ 'Pictures',
+ 'Pictures/Alliances',
+ 'Pictures/Gids',
+ 'Pictures/Planets',
+ 'Pictures/Portraits',
+ 'Pictures/Characters',
+ 'Pictures/Characters/Chat',
+ 'Pictures/Types',
+ 'Pictures/Blueprints',
+ 'Temp',
+ 'Temp/Mapbrowser',
+ 'Texture',
+ 'Texture/Planets',
+ 'Texture/Planets/Visited',
+ 'Shader',
+ 'Fonts']
+userCacheDirs = ['/EVE/capture',
+ '/EVE/capture/Screenshots',
+ '/EVE/capture/Portraits',
+ '/EVE/logs',
+ '/EVE/logs/Chatlogs',
+ '/EVE/logs/Gamelogs',
+ '/EVE/logs/Marketlogs',
+ '/EVE/logs/Fleetlogs']
+servicesToRun = ['counter',
+ 'sessionMgr',
+ 'addressbook',
+ 'clientStatsSvc',
+ 'dataconfig',
+ 'godma',
+ 'photo',
+ 'machoNet',
+ 'mailSvc',
+ 'notificationSvc',
+ 'objectCaching',
+ 'LSC',
+ 'inv',
+ 'pwn',
+ 'focus',
+ 'debug',
+ 'jumpQueue',
+ 'scanSvc',
+ 'browserHostManager',
+ 'localizationClient',
+ 'launcher',
+ 'jumpMonitor',
+ 'calendar',
+ 'LiveUpdateSvc',
+ 'monitor',
+ 'processHealth',
+ 'planetInfo',
+ 'district',
+ 'browserImage',
+ 'sofService',
+ 'prefetchSvc',
+ 'visualEffect']
+autoexec_evecore.SetupForChina()
+autoexec_client_core.StartClient(appCacheDirs, userCacheDirs, servicesToRun)
