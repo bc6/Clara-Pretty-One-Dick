@@ -1,0 +1,8 @@
+#Embedded file name: localization/propertyHandlers\__init__.py
+import characterPropertyHandler
+import characterPropertyHandler
+import itemPropertyHandler
+import locationPropertyHandler
+import npcOrganizationPropertyHandler
+import numericPropertyHandler
+import timeIntervalPropertyHandler
